@@ -29,16 +29,16 @@ public class Topic implements Observable {
 			observer.update();
 		}
 	}
+	
+	public void setTopic(String topic) {
+		this.topic = topic;
+		this.notifyObservers();
+	}
+
 
 	@Override
 	public String getUpdate() {
 		return this.topic;
 	}
-	
-	public void setTopic(String newTopic) {
-		this.topic = newTopic;
-		this.notifyObservers();
-	}
-	
 
 }

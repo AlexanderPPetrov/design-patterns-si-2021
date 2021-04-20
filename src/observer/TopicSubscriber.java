@@ -11,15 +11,12 @@ public class TopicSubscriber implements Observer {
 
 	@Override
 	public void update() {
-		
 		if(this.topic == null) {
 			System.out.println(this.getName() + " has no topic");
 			return;
 		}
-
 		String latestTopic = this.topic.getUpdate();
-		System.out.println(this.getName() + " received an update: " + latestTopic);
-
+		System.out.println(this.getName() + " received topic: " + latestTopic);
 	}
 
 	@Override
